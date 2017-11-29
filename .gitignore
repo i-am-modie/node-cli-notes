@@ -1,7 +1,5 @@
 #jetbrains
 .idea
-#nodemodules
-node_modules
 # Logs
 logs
 *.log
