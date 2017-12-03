@@ -1,5 +1,3 @@
-console.log('Starting apka');
-
 const fs = require('fs');
 
 const fetchNotes = () => {
@@ -31,9 +29,8 @@ var addNote = (title, body) => {
     }
 };
 
-
 var getAll = () => {
-  console.log('Getting all notes');
+  return fetchNotes();
 };
 
 var removeNote = (title) => {
@@ -51,7 +48,7 @@ var getNote = (title) => {
 
 var logNote = (note) =>{
     console.log('save complete');
-    console.log('---');
+    console.log('----');
     console.log(`Title: ${note.title}`);
     console.log(`Body: ${note.body}`);
 }

@@ -1,5 +1,3 @@
-console.log('Starting app.');
-
 const fs = require('fs');
 const _ = require('lodash');
 const yargs = require('yargs');
@@ -7,8 +5,6 @@ const yargs = require('yargs');
 const notes = require('./notes.js');
 
 const argv = yargs.argv;
-console.log('Process', process.argv);
-console.log('Yargs', argv);
 let command = process.argv[2];
 
 console.log('Command: ', command);
@@ -22,7 +18,9 @@ switch (command){
         else console.log('duplicate');
         break;
     case 'list':
-        notes.getAll();
+        var store = notes.getAll();
+        console.log(`Printing ${store.length} note(s)`);
+        store.forEach((note) => notes.logNote(note));
         break;
     case 'remove':
         let removal = notes.removeNote(argv.title);
