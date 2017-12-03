@@ -3,7 +3,10 @@
 Simple notes aplication in node.js. Stores notes in json file.
 
 ## HOW TO USE
-
+Install depedencies
+```
+npm install in root directory
+```
 Listing notes
 ```
 node app.js list
